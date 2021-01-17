@@ -53,9 +53,9 @@ export default function Home() {
         }).queue([
             {
                 title: 'Roll Number',
-                text: 'Enter Student Roll Number',
+                text: 'Enter Student Roll Number (short number)',
                 inputAttributes: {
-                    maxlength: "8"
+                    maxlength: "9"
                   }
             },
             {
@@ -119,9 +119,9 @@ export default function Home() {
         }).queue([
             {
                 title: 'Roll Number',
-                text: 'Enter Student Roll Number',
+                text: 'Enter Student Roll Number (short number)',
                 inputAttributes: {
-                    maxlength: "8"
+                    maxlength: "9"
                   }
             },
             {
