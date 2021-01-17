@@ -9,7 +9,7 @@ try {
   var incomingData = JSON.parse(event.body);
 var result =await client.query(
     q.Update(q.Ref(q.Collection("semester-7"),incomingData.id),
-    { data: { roll_n0:  incomingData.roll_n0, name: incomingData.name, email: incomingData.email, gender: incomingData.gender} },
+    { data: { roll_n0:  incomingData.roll_n0, name: incomingData.name, CNIC: incomingData.CNIC, gender: incomingData.gender} },
     )
 )
   

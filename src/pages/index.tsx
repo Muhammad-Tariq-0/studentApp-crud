@@ -54,15 +54,24 @@ export default function Home() {
             {
                 title: 'Roll Number',
                 text: 'Enter Student Roll Number',
+                inputAttributes: {
+                    maxlength: "8"
+                  }
             },
             {
                 title: 'Name',
-                text: 'Enter Student Name'
+                text: 'Enter Student Name',
+                inputAttributes: {
+                    maxlength: "33"
+                  }
             },
             {
-                title: 'Email',
-                text: 'Enter Student Email',
-                input: 'email'
+                title: 'CNIC',
+                text: 'Enter CNIC ',
+                input: 'text',
+                inputAttributes: {
+                    maxlength: "14"
+                  }
             },
             {
                 title: 'Gender',
@@ -86,7 +95,7 @@ export default function Home() {
             setupdating(true);
             await fetch(`/.netlify/functions/update`, {
                 method: 'post',
-                body: JSON.stringify({ id: e.ref["@ref"].id, roll_n0: receive[0], name: receive[1], email: receive[2], gender: receive[3] })
+                body: JSON.stringify({ id: e.ref["@ref"].id, roll_n0: receive[0], name: receive[1], CNIC: receive[2], gender: receive[3] })
             })
             setupdating(false);
         }
@@ -110,16 +119,25 @@ export default function Home() {
         }).queue([
             {
                 title: 'Roll Number',
-                text: 'Enter Student Roll Number'
+                text: 'Enter Student Roll Number',
+                inputAttributes: {
+                    maxlength: "8"
+                  }
             },
             {
                 title: 'Name',
-                text: 'Enter Student Name'
+                text: 'Enter Student Name',
+                inputAttributes: {
+                    maxlength: "33"
+                  }
             },
             {
-                title: 'Email',
-                text: 'Enter Student Email',
-                input: 'email'
+                title: 'CNIC',
+                text: 'Enter CNIC ',
+                input: 'text',
+                inputAttributes: {
+                    maxlength: "14"
+                  }
             },
             {
                 title: 'Gender',
@@ -143,7 +161,7 @@ export default function Home() {
             setloading(true);
             await fetch(`/.netlify/functions/create`, {
                 method: 'post',
-                body: JSON.stringify({ roll_n0: receive[0], name: receive[1], email: receive[2], gender: receive[3] })
+                body: JSON.stringify({ roll_n0: receive[0], name: receive[1], CNIC: receive[2], gender: receive[3] })
             })
             setloading(false);
         }
@@ -166,7 +184,7 @@ export default function Home() {
                 <tr>
                     <th>Roll Number</th>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th>(CNIC)</th>
                     <th>Gender</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -178,7 +196,7 @@ export default function Home() {
                         <tr>
                             <td>{e.data.roll_n0} </td>
                             <td>{e.data.name}</td>
-                            <td>{e.data.email}</td>
+                            <td>{e.data.CNIC}</td>
                             <td>{e.data.gender}</td>
                             <td>
                                 <a className="updatebutton" onClick={() => { updateData(e) }} >update</a>

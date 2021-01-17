@@ -28,8 +28,8 @@
 
 @media (max-width: 590px){
 	#students{
-		min-width: 210%;
-		
+		min-width: 500px;
+		font-size: 10px;
 	}
 }
 
@@ -83,7 +83,7 @@ h1 {
 
 @media (max-width: 590px){
 	.overlay{
-		min-width: 210%;
+		min-width: 500px;
 		min-height: 250px;
 		padding: 50px;
 		color: #FFF;
@@ -150,7 +150,7 @@ h1 {
 
 @media (max-width:500px){
 	.copyright{
-		margin-left: 50%;
+		margin-left: 80px;
 		margin-top: 200px;
 		color: white;
 	}

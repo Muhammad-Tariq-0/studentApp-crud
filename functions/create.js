@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
     const result = await adminClient.query(
       q.Create(
         q.Collection('semester-7'),
-        { data: { roll_n0:  messageBody.roll_n0, name: messageBody.name, email: messageBody.email, gender: messageBody.gender} },
+        { data: { roll_n0:  messageBody.roll_n0, name: messageBody.name, CNIC: messageBody.CNIC, gender: messageBody.gender} },
       )
     )
 
