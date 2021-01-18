@@ -38,7 +38,7 @@ export default function Home() {
 
     function updateData(e) {
         console.log("update funtion Called successfully");
-
+        const roll_n0 = e.data.roll_n0;
         const inputOptions = {
             'Male': 'Male',
             'Female': 'Female',
@@ -53,33 +53,44 @@ export default function Home() {
         }).queue([
             {
                 title: 'Roll Number',
+<<<<<<< Updated upstream
                 text: 'Enter Student Roll Number',
                 inputAttributes: {
                     maxlength: "10"
                   }
+=======
+                text: 'Enter Student Roll Number (short number)',
+                inputValue: e.data.roll_n0,
+                inputAttributes: {
+                    maxlength: "9"
+                }
+>>>>>>> Stashed changes
             },
             {
                 title: 'Name',
                 text: 'Enter Student Name',
+                inputValue: e.data.name,
                 inputAttributes: {
                     maxlength: "33"
-                  }
+                }
             },
             {
                 title: 'CNIC',
                 text: 'Enter CNIC ',
+                inputValue: e.data.CNIC,
                 input: 'text',
                 inputAttributes: {
                     maxlength: "14"
-                  }
+                }
             },
             {
                 title: 'Gender',
                 text: 'Select Student Gender',
+                inputValue: e.data.gender,
                 input: 'radio',
                 inputOptions: inputOptions,
             },
-        ]).then((result:any) => {
+        ]).then((result: any) => {
             if (result.value) {
                 console.log(result.value[0])
                 Swal.fire({
@@ -121,15 +132,20 @@ export default function Home() {
                 title: 'Roll Number',
                 text: 'Enter Student Roll Number',
                 inputAttributes: {
+<<<<<<< Updated upstream
                     maxlength: "10"
                   }
+=======
+                    maxlength: "9"
+                }
+>>>>>>> Stashed changes
             },
             {
                 title: 'Name',
                 text: 'Enter Student Name',
                 inputAttributes: {
                     maxlength: "33"
-                  }
+                }
             },
             {
                 title: 'CNIC',
@@ -137,7 +153,7 @@ export default function Home() {
                 input: 'text',
                 inputAttributes: {
                     maxlength: "14"
-                  }
+                }
             },
             {
                 title: 'Gender',
@@ -145,7 +161,7 @@ export default function Home() {
                 input: 'radio',
                 inputOptions: inputOptions,
             },
-        ]).then((result:any) => {
+        ]).then((result: any) => {
             if (result.value) {
                 console.log(result.value[0])
                 Swal.fire({
@@ -211,16 +227,12 @@ export default function Home() {
             <br /><br /><br />
             <br /><br /><br />
         </div>
-       
-        <footer>
-                
-<p className="copyright">Copyright &copy; By Muhammad Tariq</p>
 
-            </footer>
-            
-        {/* <footer className="bottom">
-            <p>Copy righted by tari</p>
-        </footer> */}
+        <footer>
+            <p className="copyright">Copyright &copy; By Muhammad Tariq</p>
+        </footer>
+
+
     </div>
 }
 
