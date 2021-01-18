@@ -53,19 +53,12 @@ export default function Home() {
         }).queue([
             {
                 title: 'Roll Number',
-<<<<<<< Updated upstream
                 text: 'Enter Student Roll Number',
+                inputValue: e.data.roll_n0,
                 inputAttributes: {
                     maxlength: "10"
                   }
-=======
-                text: 'Enter Student Roll Number (short number)',
-                inputValue: e.data.roll_n0,
-                inputAttributes: {
-                    maxlength: "9"
-                }
->>>>>>> Stashed changes
-            },
+                },
             {
                 title: 'Name',
                 text: 'Enter Student Name',
@@ -132,14 +125,9 @@ export default function Home() {
                 title: 'Roll Number',
                 text: 'Enter Student Roll Number',
                 inputAttributes: {
-<<<<<<< Updated upstream
                     maxlength: "10"
                   }
-=======
-                    maxlength: "9"
-                }
->>>>>>> Stashed changes
-            },
+                 },
             {
                 title: 'Name',
                 text: 'Enter Student Name',
