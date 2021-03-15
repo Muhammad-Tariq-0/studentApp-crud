@@ -177,7 +177,7 @@ export default function Home() {
 
         <div>
             <div className="overlay">
-                <h1>University of Chakwal</h1>
+                <h1>University of Thal</h1>
                 <h3>All Students Record!</h3> <br />
                 <button onClick={AddStudent} className="AddStudentbutton">Add Student</button>
             </div>
